@@ -80,6 +80,9 @@ ul {
   list-style-type: none;
 }
 
+li {
+    margin: 5%;
+}
 
 .buttons {
   position: fixed;
