@@ -15,7 +15,7 @@ class APIManager {
   getRandomQuote() {
     const URL = "https://api.kanye.rest";
     return $.get(URL).then((quote) => {
-      this.data.quote = quote.quote;
+      this.data.quote = quote; 
     });
   }
 
