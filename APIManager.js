@@ -15,7 +15,7 @@ class APIManager {
   getRandomQuote() {
     const URL = "https://api.kanye.rest";
     return $.get(URL).then((quote) => {
-      this.data.quote = quote; 
+      this.data.quote = quote;
     });
   }
 
@@ -27,14 +27,14 @@ class APIManager {
       let pokemon = data.results[randomNumber];
       $.get(pokemon.url).then((pokemon) => {
         let pokemonImageURL = pokemon.sprites.front_default;
-        this.data.pokemon = { name: pokemon.name, image: pokemonImageURL };
+        this.data.pokemon = { name: pokemon.name, imgURL: pokemonImageURL };
       });
     });
   }
 
   getRandomAboutMe = function () {
     const URL =
-      "https://baconipsum.com/api/?type=all-meat&paras=1&start-with-lorem=1";
+      "https://baconipsum.com/api/?type=all-meat&paras=0.5&start-with-lorem=1";
     return $.get(URL).then((randomParagraph) => {
       this.data.AboutMe = randomParagraph[0];
     });

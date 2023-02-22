@@ -1,9 +1,11 @@
 const apiManager = new APIManager();
 const renderer = new Renderer();
+dataApdatedPromise = null;
 
 $("#loadUsers").on("click", function () {
-  apiManager.updateData().then(() => {
-    renderer.renderMainUser(apiManager.data.users[0]);
-    renderer.renderQuete(apiManager.data.quote);
-  });
+  dataApdatedPromise = apiManager.updateData();
+});
+
+$("#display").on("click", () => {
+  dataApdatedPromise.then(renderer.renderAllSections(apiManager.data));
 });

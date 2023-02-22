@@ -80,6 +80,7 @@ ul {
   list-style-type: none;
 }
 
+
 .buttons {
   position: fixed;
   bottom: 1vw;
@@ -125,4 +126,8 @@ button {
 .meat-text {
   padding: 1vw;
   font-size: 1vmax;
+}
+
+#about-title {
+  padding-left: 1vw;
 }

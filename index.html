@@ -31,7 +31,7 @@
       </div>
       <div class="buttons">
         <button id="loadUsers">Load User Data</button>
-        <button>Display User</button>
+        <button id="display">Display User</button>
       </div>
     </div>
 
@@ -44,8 +44,26 @@
     </script>
 
     <script id="quote" type="text/x-handlebars-template">
-    <p>Favorite quote:</p>
-    <p>"{{quote}}."</p>
+      <p>Favorite quote:</p>
+      <p>"{{quote}}."</p>
+    </script>
+
+    <script id="pokemonInfo" type="text/x-handlebars-template">
+      <img id="pokemon-image" src="{{imgURL}}" />
+      <p id="pokemon-text">Favorite Pokemon: {{name}}</p>
+    </script>
+
+    <script id="about" type="text/x-handlebars-template">
+      <p id="about-title">About me</p>
+      <p class="meat-text">{{aboutMe}}</p>
+    </script>
+
+    <script id="friends" type="text/x-handlebars-template">
+      {{#each friends}}
+        <ul>
+          <div>{{fullName}}</div>
+        </ul>
+      {{/each}}
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
