@@ -9,7 +9,9 @@ $("#loadUsers").on("click", function () {
 });
 
 $("#display").on("click", () => {
-  dataApdatedPromise.then(() =>{renderer.renderAllSections(apiManager.data)});
+  dataApdatedPromise.then(() => {
+    renderer.renderAllSections(apiManager.data);
+  });
 });
 
 $("#saveUser").on("click", function () {
@@ -19,6 +21,6 @@ $("#saveUser").on("click", function () {
 
 $("#dispaly-saved-user").on("click", function () {
   let chosenUser = $("select").val();
-  let userData = JSON.parse(localStorage[chosenUser]);
+  let userData = JSON.parse(storage.getUserData(chosenUser));
   renderer.renderAllSections(userData);
 });
