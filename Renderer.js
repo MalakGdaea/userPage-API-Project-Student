@@ -31,6 +31,17 @@ class Renderer {
     this.addElements("#friends", ".friends-container", { friends });
   }
 
+  renderDropDownList() {
+    let friendsNames = [];
+    for (let key in localStorage) {
+      if (key === "length") {
+        break;
+      }
+      friendsNames.push({ fullName: key });
+    }
+    this.addElements("#dropdown-list", "#saved-users", { friendsNames });
+  }
+
   renderAllSections(data) {
     this.renderMainUser(data.users[0]);
     this.renderQuete(data.quote);
