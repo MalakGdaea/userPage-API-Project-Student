@@ -28,7 +28,6 @@ class Renderer {
       let user = usersData[index];
       friends.push({ fullName: `${user.name.first} ${user.name.last}` });
     }
-    console.log(friends);
     this.addElements("#friends", ".friends-container", { friends });
   }
 
