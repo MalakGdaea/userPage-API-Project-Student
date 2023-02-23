@@ -81,7 +81,7 @@ ul {
 }
 
 li {
-    margin: 5%;
+  margin: 5%;
 }
 
 .buttons {
@@ -133,4 +133,13 @@ button {
 
 #about-title {
   padding-left: 1vw;
+}
+
+.search_categories {
+  font-size: 13px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
 }

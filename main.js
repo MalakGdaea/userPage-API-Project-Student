@@ -9,7 +9,7 @@ $("#loadUsers").on("click", function () {
 });
 
 $("#display").on("click", () => {
-  dataApdatedPromise.then(renderer.renderAllSections(apiManager.data));
+  dataApdatedPromise.then(() =>{renderer.renderAllSections(apiManager.data)});
 });
 
 $("#saveUser").on("click", function () {
